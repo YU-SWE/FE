@@ -1,0 +1,90 @@
+/* darkMode.css */
+:root {
+    --dark-bg-primary: #18181b;      /* 메인 배경 */
+    --dark-bg-header: #1a1a1a;       /* 헤더 배경 - 약간 더 밝은 톤 */
+    --dark-bg-navbar: #1f1f1f;       /* 네비바 배경 - 헤더보다 더 밝은 톤 */
+    --dark-bg-secondary: #27272a;    /* 컴포넌트 배경 */
+    --dark-bg-tertiary: #3f3f46;     /* 요소 배경 */
+    --dark-border: #52525b;          /* 보더 */
+    --dark-text-primary: #fafafa;    /* 주요 텍스트 */
+    --dark-text-secondary: #a1a1aa;  /* 부가 텍스트 */
+}
+
+/* 기본 배경 */
+html.dark,
+body.dark {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+/* 헤더 영역 */
+.dark .header {
+    background-color: var(--dark-bg-header);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+/* 네비게이션 바 */
+.dark .navbar {
+    background-color: var(--dark-bg-navbar);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.dark .nav-container {
+    background-color: var(--dark-bg-navbar);
+}
+
+.dark .nav-links a {
+    color: var(--dark-text-primary);
+}
+
+.dark .nav-links a:hover {
+    background-color: var(--dark-bg-tertiary);
+}
+
+.dark .nav-links a.active {
+    color: #26baa4;
+}
+
+/* 검색창 */
+.dark .search-input {
+    background-color: var(--dark-bg-tertiary);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.dark .search-input:focus {
+    border-color: #26baa4;
+    background-color: var(--dark-bg-tertiary);
+}
+
+/* 게시판 영역 */
+.dark .board-container {
+    background-color: var(--dark-bg-secondary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark .board-table thead {
+    background-color: var(--dark-bg-tertiary);
+}
+
+.dark .board-table th {
+    color: var(--dark-text-primary);
+    border-bottom: 2px solid var(--dark-border);
+}
+
+.dark .board-table td {
+    color: var(--dark-text-secondary);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.dark .board-table tbody tr:hover {
+    background-color: var(--dark-bg-tertiary);
+}
+
+.dark .logo-text {
+    color: var(--dark-text-primary);
+}
+
+.dark .search-icon {
+    color: var(--dark-text-secondary);
+}

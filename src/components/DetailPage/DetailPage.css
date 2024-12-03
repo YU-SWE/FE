@@ -1,0 +1,537 @@
+.header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    grid-column: 1;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 100px;
+    color: #00c7ae;
+}
+
+.restaurant_info h1{
+    display: flex;
+}
+
+.search-container {
+    grid-column: 2;
+    justify-self: center;
+    display: flex;
+    width: 60%;
+    max-width: 600px;
+    margin-right: 20%;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.search-bar {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.search-bar::placeholder {
+    color: #999;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.search-button svg {
+    color: #00c7ae;
+    width: 20px;
+    height: 20px;
+}
+
+.Detail_cmp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #eee;
+}
+
+.cmp {
+    background-color: white;
+    width: 600px;
+    border-radius: 2%;
+    margin: 20px auto;
+}
+
+.restaurant_photo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.restaurant_photo img {
+    width: 45%;
+    margin-top: 4%;
+}
+
+.restaurant_info, .menu_info {
+    padding-top: 1px;
+    padding-bottom: 10px;
+    margin: 5%;
+    text-align: left;
+}
+
+
+.photo_info > h2, .review_info > h2 {
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 2%;
+}
+
+.detail_photo {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    justify-items: center;
+}
+
+.detail_photo img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6%;
+}
+
+.stars{
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.m_button {
+    width: 94%;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.review-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    margin: 5%
+}
+
+.review-form form{
+    margin:0 auto;
+}
+
+.review-form h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-review {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #26baa4;
+}
+
+.submit-review:hover {
+    background-color: #1b9f8c;
+}
+
+.image-upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.image-upload-area:hover {
+    background-color: #f8f8f8;
+}
+
+.image-upload-area img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.review-image img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.review {
+    text-align: left;
+    margin-left: 5%;
+    background-color: #FFF8F0;
+    border: 1px solid #E8D5C4;
+    border-radius: 8px;
+}
+
+.dark .review {
+    background-color: #FFF8F0;
+    border: 1px solid #E8D5C4;
+    border-radius: 8px;
+}
+body.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #26baa4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dark .dark-mode-toggle {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.dark .Detail_cmp {
+    background-color: #1a1a1a;
+}
+
+.dark .cmp {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.dark .menu_info,
+.dark .restaurant_info,
+.dark .review-form {
+    background-color: #333333;
+}
+
+.dark .submit-review {
+    background-color: white;
+    color: black;
+}
+
+.dark .image-upload-area {
+    border-color: #555555;
+}
+
+.dark .image-upload-area:hover {
+    background-color: #3a3a3a;
+}
+
+.dark .header {
+    background-color: #2c2c2c;
+}
+
+.dark .search-container {
+    background-color: #333333;
+}
+
+.dark .search-bar {
+    color: #ffffff;
+}
+
+.dark .search-bar::placeholder {
+    color: #aaaaaa;
+}
+
+.dark .search-button svg {
+    color: #00c7ae;
+}
+
+.review-list {
+    margin: 20px 5%;
+}
+
+.review {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.reviewer-name {
+    margin-right: auto;
+    font-weight: bold;
+    color: #333;
+}
+
+.answer-context {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.review-rating {
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.review-content {
+    color: #666;
+    line-height: 1.6;
+    /*margin: 0;*/
+    margin-right: 1rem;
+}
+
+/* 다크모드 스타일 */
+.dark .review {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+.dark .review-header {
+    border-bottom-color: #444;
+}
+
+.dark .reviewer-name {
+    color: #fff;
+}
+
+.dark .review-content {
+    color: #ccc;
+}
+
+.dark .review-rating {
+    color: #ffd700;
+}
+
+/* 리뷰 호버 효과 */
+.review:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .review-list {
+        margin: 20px 3%;
+    }
+
+    .review {
+        padding: 15px;
+    }
+
+    .review-rating {
+        font-size: 16px;
+    }
+}
+
+.review-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.delete-review-btn {
+    /*background-color: #ff4444;*/
+    background: #7D543F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+
+.dark .delete-review-btn {
+    background: #7D543F;
+    color: #ffffff;
+}
+
+.dark .delete-review-btn:hover {
+    background-color: #990000;
+}
+
+.review-image {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.review-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.dark .review-img {
+    border-color: #444;
+}
+
+.map-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.close-map {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.map-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.map-button:hover {
+    background-color: #45a049;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 2em;
+    padding: 0 5px;
+    transition: color 200ms ease;
+}
+.form-group textarea {
+    width: 95%;
+    min-height: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #FFF8F0;
+    border: 1px solid #E8D5C4;
+}
+
+.edit-review-btn {
+    margin-right: 8px;
+    padding: 4px 8px;
+    /*background-color: #4CAF50;*/
+    background: #5C3D2E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dark .edit-review-btn {
+    background: #99775C;
+    color: #ffffff;
+}
+
+.button-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.button-group button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-group button[type="submit"] {
+    background-color: #5C3D2E;
+    color: white;
+}
+
+.button-group button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}

@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.login_page {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titleWrap {
+    font-size: 26px;
+    font-weight: bold;
+    color: #262626;
+    margin-bottom: 20px;
+}
+
+.contentWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bottomWrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.joinLink {
+    color: #666;
+    text-decoration: none;
+}
+
+.joinLink:hover {
+    text-decoration: underline;
+}

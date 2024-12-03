@@ -1,0 +1,80 @@
+/* 프로필 전체 컨테이너 */
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* 헤더 */
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.profile-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* 프로필 정보 */
+.profile-info {
+    margin: 20px 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.profile-info p {
+    margin: 10px 0;
+}
+
+.profile-info strong {
+    color: #555;
+}
+
+/* 수정 버튼 */
+.edit-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+/* 다크 모드 */
+.dark-mode .profile-container {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+.dark-mode .edit-button {
+    background-color: #444;
+    color: #ddd;
+}
+
+.dark-mode .edit-button:hover {
+    background-color: #555;
+}

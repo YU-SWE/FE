@@ -1,0 +1,220 @@
+/* 헤더와 네비게이션 전체를 화면 가득 채우도록 수정 */
+.Header {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100vw; /* 너비를 화면 전체로 설정 */
+    margin: 0;
+    position: sticky; /* 스크롤 시 헤더 고정 */
+    top: 0;
+    z-index: 1000; /* 다른 요소보다 위에 배치 */
+}
+
+.dark .Header {
+    background-color: #18181b;
+}
+
+/* 헤더 상단: 로고, 검색창, 로그인/회원가입 버튼 배치 */
+.Header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px; /* 여백 조정 */
+    height: 8vh; /* 헤더 영역 높이 */
+    box-sizing: border-box;
+}
+
+.dark .Header_top {
+    border-bottom: 1px solid #333; /* 다크 모드에서 구분선 추가 */
+}
+
+/* 로고 이미지 */
+.Header_logo {
+    height: 50px; /* 로고 크기 조정 */
+    cursor: pointer;
+}
+
+/* 검색창 */
+.Header_center_search {
+    display: flex;
+    align-items: center;
+    background-color: papayawhip;
+    border-radius: 30px;
+    padding: 0 15px;
+    width: 40%; /* 검색창 너비 */
+    height: 40px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dark .Header_center_search {
+    background-color: #2d2d30;
+    box-shadow: none;
+}
+
+.Header_center_search input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    padding-left: 10px;
+}
+
+.dark .Header_center_search input {
+    color: white;
+}
+
+.Header_center_search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header_center_search button img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0.5); /* 아이콘 밝기 감소 */
+}
+
+.dark .Header_center_search button img {
+    filter: brightness(1); /* 다크 모드에서 아이콘 밝기 원래대로 */
+}
+
+/* 로그인/회원가입 버튼 */
+.Header_right {
+    display: flex;
+    gap: 15px;
+}
+
+.Header_button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dark .Header_button {
+    color: white;
+}
+
+.Header_button:hover {
+    background: mediumseagreen;
+    color: white;
+}
+
+/* 네비게이션 바 */
+.Header_nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #5C3D2E;
+    height: 5vh;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dark .Header_nav {
+    background: #27272a;
+}
+
+/* 네비게이션 메뉴 */
+.nav_ul {
+    background: #5C3D2E;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav_ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav_ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    transition: color 0.2s, text-shadow 0.2s;
+    padding: 5px 10px;
+}
+
+.nav_ul li a:hover {
+    color: mediumseagreen;
+    text-shadow: 0px 0px 5px mediumseagreen;
+}
+
+/* 다크 모드 */
+.dark .nav_ul li a {
+    color: #d4d4d8;
+}
+
+.dark .nav_ul li a:hover {
+    color: #86efac;
+}
+
+/* 페이지 메인 컨텐츠 */
+.Container {
+    width: 100vw;
+    margin: 0 auto;
+    padding-top: 8vh; /* 헤더 높이만큼 패딩 추가 */
+    box-sizing: border-box;
+}
+/* 다크 모드 버튼 */
+.DarkMode_button {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.DarkMode_button:hover {
+    background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+    transform: scale(1.05);
+}
+
+/* 다크 모드 스타일 */
+.dark .DarkMode_button {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+.dark .DarkMode_button:hover {
+    background: linear-gradient(45deg, #fc5c7d, #6a82fb);
+}
+
+/* Choice_Location */
+.Choice_Location {
+    height: 200px;
+    background-color: #EAB048;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dark .Choice_Location {
+    background-color: #2c2c2e;
+    color: #e4e4e7;
+}

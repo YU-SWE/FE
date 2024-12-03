@@ -1,0 +1,57 @@
+/* 지도와 리스트 간격 */
+#map {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 400px;
+}
+
+/* 전체 리스트 컨테이너 */
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 개별 리스트 아이템 */
+.restaurant-item {
+    flex: 1 1 calc(20% - 16px); /* 한 줄에 5개 */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    max-width: calc(20% - 16px);
+}
+
+.restaurant-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 이미지 */
+.restaurant-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 텍스트 */
+.restaurant-item h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.restaurant-item p {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 5px 0;
+}

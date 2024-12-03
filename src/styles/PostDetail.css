@@ -1,0 +1,186 @@
+/* PostDetail.css */
+:root {
+    --light-bg: #ffffff;
+    --light-text-primary: #333333;
+    --light-text-secondary: #666666;
+    --light-border: #e0e0e0;
+    --light-button-bg: #f5f5f5;
+    --accent-color: #5C3D2E;
+    --accent-hover: #7d543f;
+}
+
+/* 라이트 모드 스타일 */
+.post-detail-container {
+    background: var(--light-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--light-text-primary);
+    margin-bottom: 24px;
+}
+
+.post-info {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--light-border);
+    margin-bottom: 24px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-item .label {
+    color: var(--light-text-secondary);
+    font-size: 14px;
+}
+
+.info-item .value {
+    color: var(--light-text-primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--light-text-primary);
+    min-height: 200px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--light-border);
+}
+
+.post-button {
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #FFF8F0;
+    border: 1px solid #E8D5C4;
+}
+
+.primary-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: flex-end;
+    margin-left: 1rem;
+
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(77, 171, 247, 0.2);
+    background-color: var(--accent-hover);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+.secondary-button {
+    background-color: var(--light-button-bg);
+    border: 1px solid var(--light-border);
+    color: var(--light-text-secondary);
+}
+
+.secondary-button:hover {
+    background-color: #e9e9e9;
+    transform: translateY(-1px);
+}
+
+/* 다크모드 스타일 */
+.dark .post-detail-container {
+    background-color: var(--dark-bg-secondary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark .post-title {
+    color: var(--dark-text-primary);
+}
+
+.dark .post-info {
+    border-bottom-color: var(--dark-border);
+}
+
+.dark .info-item .label {
+    color: var(--dark-text-secondary);
+}
+
+.dark .info-item .value {
+    color: var(--dark-text-primary);
+}
+
+.dark .post-content {
+    color: var(--dark-text-primary);
+}
+
+.dark .button-container {
+    border-top-color: var(--dark-border);
+}
+
+.dark .secondary-button {
+    background-color: var(--dark-bg-tertiary);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.dark .secondary-button:hover {
+    background-color: var(--dark-bg-hover);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .post-detail-container {
+        padding: 20px;
+        margin: 16px;
+    }
+
+    .post-info {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}

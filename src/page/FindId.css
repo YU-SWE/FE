@@ -1,0 +1,77 @@
+/* FindId.css */
+.content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.board-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Form styles */
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.verification-button {
+    background-color: #26baa4;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 120px;
+}
+
+.verification-button:hover {
+    background-color: #229e8a;
+    transform: translateY(-1px);
+}
+
+.submit-button {
+    width: 100%;
+    background-color: #26baa4;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.submit-button:hover {
+    background-color: #229e8a;
+    transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .board-container {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .flex {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .verification-button {
+        width: 100%;
+    }
+}
