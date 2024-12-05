@@ -2,79 +2,135 @@
 .profile-container {
     max-width: 600px;
     margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #d9d9d9,
+    -10px -10px 20px #ffffff;
+    font-family: 'Pretendard', sans-serif;
 }
 
-/* 헤더 */
+/* 프로필 헤더 */
 .profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* 입력 그룹 */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 600;
+}
+
+.profile-input {
+    width: 95%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: inset 2px 2px 5px #d9d9d9,
+    inset -2px -2px 5px #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.profile-input.readonly {
+    background: #f5f6f7;
+    cursor: not-allowed;
+}
+
+/* 버튼 그룹 */
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.edit-button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background: linear-gradient(135deg, #6a89cc, #4a69bd);
+    box-shadow: 0 4px 15px rgba(106, 137, 204, 0.4);
+}
+
+.edit-button.save {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.edit-button.cancel {
+    background: linear-gradient(135deg, #f44336, #e53935);
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+.edit-button.password {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+}
+
+.edit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(106, 137, 204, 0.6);
+}
+
+/* 비밀번호 모달 */
+.password-modal {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.password-modal h2 {
+    color: #2c3e50;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.profile-header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-    color: #333;
-}
-
-.profile-header p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* 프로필 정보 */
-.profile-info {
-    margin: 20px 0;
-    line-height: 1.6;
-    font-size: 1.1rem;
-}
-
-.profile-info p {
-    margin: 10px 0;
-}
-
-.profile-info strong {
-    color: #555;
-}
-
-/* 수정 버튼 */
-.edit-button {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.edit-button:hover {
-    background-color: #0056b3;
-}
-
 /* 다크 모드 */
 .dark-mode .profile-container {
-    background-color: #333;
-    color: #fff;
-    border-color: #444;
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    box-shadow: 10px 10px 20px #1a252f,
+    -10px -10px 20px #2c3e50;
 }
 
-.dark-mode .edit-button {
-    background-color: #444;
-    color: #ddd;
+.dark-mode .profile-input {
+    background: #34495e;
+    color: #ecf0f1;
+    box-shadow: inset 2px 2px 5px #2c3e50,
+    inset -2px -2px 5px #34495e;
 }
 
-.dark-mode .edit-button:hover {
-    background-color: #555;
+.dark-mode .profile-input.readonly {
+    background: #2c3e50;
+}
+
+.dark-mode .password-modal {
+    background: #34495e;
+    color: #ecf0f1;
 }
