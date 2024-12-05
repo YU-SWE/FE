@@ -54,6 +54,7 @@
     width: 100%;
 }
 .input-label {
+    width: 80%;
     font-size: 14px;
     font-weight: 600;
     color: var(--light-text-secondary);
