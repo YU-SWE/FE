@@ -106,7 +106,6 @@ class MainPage extends Component {
                     } else if (typeof rawData === "string") {
                         // JSON 문자열 처리
                         const rawEntries = rawData.match(/\{.*?\}/g);
-                        console.log("sex : " + rawEntries);
                         if (rawEntries) {
                             const parsedEntries = rawEntries.map((entry) =>
                                 this.parseRequiredData(entry)
